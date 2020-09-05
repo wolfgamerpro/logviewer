@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <title>Log Entry</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
 
-    <meta content="{{ log_entry.thread_messages | length }} messages {% if log_entry.open %}(Open){% else %}(Closed){% endif %}" property="og:site_name">
-    <meta content="Recipient: {{ log_entry.recipient | string | e }}" property="og:title">
+    <meta content="{{ log_entry.thread_messages | length }} mensajes {% if log_entry.open %}(Open){% else %}(Closed){% endif %}" property="og:site_name">
+    <meta content="Destinatario: {{ log_entry.recipient | string | e }}" property="og:title">
     <meta content='{{ log_entry.recipient.avatar_url }}' property='og:image'>
-    <meta content='Created {{ log_entry.human_created_at }}' property='og:image'>
+    <meta content='Creado {{ log_entry.human_created_at }}' property='og:image'>
 
     <link href="/static/css/logstyle.css" rel="stylesheet">
     <link href="/static/css/solarized-dark.css" rel="stylesheet">
@@ -45,9 +45,9 @@
                  alt="avatar">
         </div>
         <div class="info__metadata">
-            <div class="info__guild-name"><span style='color:white'>Thread Logs</span> {% if log_entry.open %}
-                (Open){% else %}(Closed){% endif %}</div>
-            <div title="{{ log_entry.recipient.id }}" class="info__channel-topic tooltip"><span style="color:white">Recipient:
+            <div class="info__guild-name"><span style='color:white'>Registro de TicketLogs</span> {% if log_entry.open %}
+                (Abierto){% else %}(Cerrado){% endif %}</div>
+            <div title="{{ log_entry.recipient.id }}" class="info__channel-topic tooltip"><span style="color:white">Destinatario:
                 <b>{{ log_entry.recipient.name | e }}</b></span>#{{ log_entry.recipient.discriminator }}
                 <span class='tooltiptext pre pre--inline'>{{ log_entry.recipient.id }}</span>
             </div>
@@ -64,7 +64,7 @@
                 {% if log_entry.internal_messages %}
             
                 <div style="display: flex; justify-content: flex-end">
-                <label class="switch" title="Toggle viewing internal messages">
+                <label class="switch" title="Alternar la visualización de mensajes internos">
                         <input id='internal_toggle' type="checkbox" onclick="toggleInternalMessages()">
                         <span class="lever round"></span>
                     </label>
