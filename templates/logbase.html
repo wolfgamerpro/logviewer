@@ -45,7 +45,7 @@
                  alt="avatar">
         </div>
         <div class="info__metadata">
-            <div class="info__guild-name"><span style='color:white'>Registro de TicketLogs</span> {% if log_entry.open %}
+            <div class="info__guild-name"><span style='color:white'>Registro de Ticket</span> {% if log_entry.open %}
                 (Abierto){% else %}(Cerrado){% endif %}</div>
             <div title="{{ log_entry.recipient.id }}" class="info__channel-topic tooltip"><span style="color:white">Destinatario:
                 <b>{{ log_entry.recipient.name | e }}</b></span>#{{ log_entry.recipient.discriminator }}
