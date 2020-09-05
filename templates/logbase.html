@@ -89,7 +89,7 @@
                     <span class="chatlog__author-name" title="{{ group.author | string | e }}">{{ group.author.name | e }}</span>
                     {% if group.type == 'thread_message' %}
                     {% if group.author.mod %}
-                        <span class="mod-tag">Reply</span>
+                        <span class="mod-tag">Respuesta</span>
                     {% endif %}
                     {% elif group.type == 'anonymous' %}
                     <span class='mod-tag'>Anon</span>
@@ -135,7 +135,7 @@
                           title="{{ log_entry.closer | string | e }}">{{ log_entry.closer.name }}</span>
                     {% if log_entry.closer.mod %}
                         <span>closed the thread</span>
-                        <span class="system-tag">System</span>
+                        <span class="system-tag">Sistema</span>
                     {% endif %}
                     <span class="chatlog__timestamp">{{ log_entry.human_closed_at }}</span>
                     {% if log_entry.close_message %}
