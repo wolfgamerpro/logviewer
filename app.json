@@ -1,10 +1,10 @@
 {
-  "name": "ModMail Log Viewer",
-  "description": "A simple webserver to view selfhosted logs",
-  "repository": "https://github.com/kyb3r/logviewer",
+  "name": "Registro RequiemSupport",
+  "description": "Un servidor web simple para ver registros autohospedados",
+  "repository": "https://github.com/wolfgamerpro/logviewer",
   "env": {
     "MONGO_URI": {
-        "description": "Mongodb connection uri that contains your modmail logs.",
+        "description": "URL de conexión de Mongodb que contiene los registros de RequiemSupport.",
         "required": true
         }
     }
