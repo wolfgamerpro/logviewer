@@ -92,9 +92,9 @@
                         <span class="mod-tag">Respuesta</span>
                     {% endif %}
                     {% elif group.type == 'anonymous' %}
-                    <span class='mod-tag'>Anon</span>
+                    <span class='mod-tag'>Anónimo</span>
                     {% elif group.type == 'internal' %}
-                    <span class='internal-tag'>Internal</span>
+                    <span class='internal-tag'>Interno</span>
                     {% else %}
                         <span>took a note</span><span class="system-tag">note</span>
                     {% endif %}
@@ -104,7 +104,7 @@
                             <div class="chatlog__content" id="{{ message.id }}">
                                 {{ message.content }}
                                 {% if message.edited %}
-                                <span class="chatlog__edited-timestamp">(edited)</span>
+                                <span class="chatlog__edited-timestamp">(editado)</span>
                                 {% endif %}
                             </div>
 
